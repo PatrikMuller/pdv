@@ -1,0 +1,51 @@
+﻿@model pdvInfraestrutura.Model.Carrinho
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Carrinho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAbertura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataAbertura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginUsuarioAbertura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginUsuarioAbertura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFechamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFechamento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginUsuarioFechamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginUsuarioFechamento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

@@ -30,3 +30,10 @@ C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\pdvWeb.Vie
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\pdvWeb.dll
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\pdvWeb.pdb
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\pdvWeb.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\bin\Debug\netcoreapp2.1\pdvInfraestrutura.dll
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\bin\Debug\netcoreapp2.1\pdvInfraestrutura.pdb
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Create.g.cshtml.cs
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Delete.g.cshtml.cs
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Details.g.cshtml.cs
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Edit.g.cshtml.cs
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Index.g.cshtml.cs

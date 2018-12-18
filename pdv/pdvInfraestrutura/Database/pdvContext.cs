@@ -30,5 +30,10 @@ namespace pdvInfraestrutura.Database
             optionsBuilder.UseNpgsql(@"Server=localhost;Port=5432;Database=pdv;User Id=login_pdv;Password=123456;");
         }
 
+        public void InicializaDB()
+        {
+            //
+        }
+
     }
 }
