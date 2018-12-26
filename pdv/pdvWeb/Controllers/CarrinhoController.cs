@@ -24,7 +24,7 @@ namespace pdvWeb.Controllers
         {
             return View(await _context.Carrinhos.ToListAsync());
         }
-
+                
         // GET: Carrinho/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -74,12 +74,67 @@ namespace pdvWeb.Controllers
             }
 
             var carrinho = await _context.Carrinhos.FindAsync(id);
+
             if (carrinho == null)
             {
                 return NotFound();
             }
+
             return View(carrinho);
         }
+
+
+        // GET: Carrinho/Edit/5
+        //public async Task<IActionResult> Carrinho(int? id)
+        public ActionResult Carrinho(int? id)
+        {
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //var carrinho = await _context.Carrinhos.FindAsync(id);
+            //var carrinho = await _context.Carrinhos.Where(o => o.Id == id).SingleOrDefault();
+
+            //var retorno = (from l in session.Query<CarrinhoItem>().
+            //               Fetch(o => o.Item).
+            //               Where(o => o.Carrinho.Id == idCarrinho).
+            //               Select(o => new { o.Ordem, o.Item.Nome, o.Quantidade, o.Preco, o.Desconto, Total = (o.Quantidade * (o.Preco - o.Desconto)) }).
+            //               OrderBy(o => o.Ordem)
+            //               select l).ToList();
+            
+            var Carrinho = _context.Carrinhos.Where(o => o.Id == id).SingleOrDefault();
+
+            //ViewBag.Carrinho = _context.Carrinhos.Where(o => o.Id == id);
+            ViewBag.Itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
+
+            //var itens = (from ci in _context.CarrinhoItems
+            //             join i in _context.Items on ci.Item.Id equals i.Id
+            //             //select (ci => new { numero = ci.Ordem, nome = i.Nome, qtd = ci.Quantidade, preco = ci.Preco, desconto = ci.Desconto, total = (ci.Quantidade * (ci.Preco - ci.Desconto)) })
+            //             select ci
+            //             ).ToList();
+
+            //ViewBag.Itens = itens;
+
+
+                //var robotDogs = (from d in context.RobotDogs
+                //                 join f in context.RobotFactories
+                //                 on d.RobotFactoryId equals f.RobotFactoryId
+                //                 where f.Location == "Texas"
+                //                 select d).ToList();
+
+
+            //if (carrinho == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //var itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
+
+            return View(Carrinho);
+            
+        }
+
 
         // POST: Carrinho/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -115,7 +170,7 @@ namespace pdvWeb.Controllers
             }
             return View(carrinho);
         }
-
+                
         // GET: Carrinho/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

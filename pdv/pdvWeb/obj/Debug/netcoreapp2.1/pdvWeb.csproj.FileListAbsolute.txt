@@ -37,3 +37,4 @@ C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\View
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Details.g.cshtml.cs
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Edit.g.cshtml.cs
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Index.g.cshtml.cs
+C:\Users\User\Documents\GitHub\pdv\pdv\pdvWeb\obj\Debug\netcoreapp2.1\Razor\Views\Carrinho\Carrinho.g.cshtml.cs
