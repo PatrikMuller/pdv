@@ -9,3 +9,14 @@ C:\Users\User\Documents\GitHub\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.pdb
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.runtimeconfig.json
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.runtimeconfig.dev.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.deps.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.runtimeconfig.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.runtimeconfig.dev.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.dll
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\bin\Debug\netcoreapp2.1\pdvInfraestrutura.pdb
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.csprojAssemblyReference.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.csproj.CoreCompileInputs.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.AssemblyInfoInputs.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.AssemblyInfo.cs
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.dll
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvInfraestrutura\obj\Debug\netcoreapp2.1\pdvInfraestrutura.pdb

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using pdvInfraestrutura.Database;
 using pdvInfraestrutura.Model;
+using pdvWeb.Models;
 
 namespace pdvWeb.Controllers
 {
@@ -105,23 +106,35 @@ namespace pdvWeb.Controllers
             
             var Carrinho = _context.Carrinhos.Where(o => o.Id == id).SingleOrDefault();
 
+            //var itens = _context.Items.ToList();
+
+            var i = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id);
+
             //ViewBag.Carrinho = _context.Carrinhos.Where(o => o.Id == id);
-            ViewBag.Itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
+            //ViewBag.Itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
 
-            //var itens = (from ci in _context.CarrinhoItems
-            //             join i in _context.Items on ci.Item.Id equals i.Id
-            //             //select (ci => new { numero = ci.Ordem, nome = i.Nome, qtd = ci.Quantidade, preco = ci.Preco, desconto = ci.Desconto, total = (ci.Quantidade * (ci.Preco - ci.Desconto)) })
-            //             select ci
-            //             ).ToList();
+            List<ViewModelCarrinhoItem> itens = (from ci in _context.CarrinhoItems
+                                                 where ci.Carrinho.Id == 2
+                        select new ViewModelCarrinhoItem {
+                            Id = ci.Id,
+                            Ordem = ci.Ordem,
+                            Nome = ci.Item.Nome,
+                            Quantidade = ci.Quantidade,
+                            Preco = ci.Preco,
+                            Desconto = ci.Desconto,
+                            Total = (ci.Quantidade * (ci.Preco - ci.Desconto))
+                        }).ToList();
+                         //select ci;
+                        
+            
+            ViewBag.Itens = itens;
 
-            //ViewBag.Itens = itens;
 
-
-                //var robotDogs = (from d in context.RobotDogs
-                //                 join f in context.RobotFactories
-                //                 on d.RobotFactoryId equals f.RobotFactoryId
-                //                 where f.Location == "Texas"
-                //                 select d).ToList();
+            //var robotDogs = (from d in context.RobotDogs
+            //                 join f in context.RobotFactories
+            //                 on d.RobotFactoryId equals f.RobotFactoryId
+            //                 where f.Location == "Texas"
+            //                 select d).ToList();
 
 
             //if (carrinho == null)

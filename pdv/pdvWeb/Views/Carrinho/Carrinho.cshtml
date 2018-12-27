@@ -2,6 +2,11 @@
 
 @{
     Layout = null;
+
+
+    //List<SistemaDemanda.ViewModel.DemandaViewModel> DemandaSinteticaCategoria = ViewBag.DemandaSinteticaCategoria as List<SistemaDemanda.ViewModel.DemandaViewModel>;
+    //List<pdvWeb.Models.ViewModelCarrinhoItem> items = ViewBag.Itens as List<pdvWeb.Models.ViewModelCarrinhoItem>;
+
 }
 
 <!DOCTYPE html>
@@ -71,16 +76,19 @@
         public double Preco { get; set; }
         public double Desconto { get; set; }*@
 
-            @*numero = ci.Ordem, nome = i.Nome, qtd = ci.Quantidade, preco = ci.Preco, desconto = ci.Desconto, total*@
+            @*select new { ci.Id, ci.Ordem, ci.Item.Nome, ci.Quantidade, ci.Preco, ci.Desconto, Total = (ci.Quantidade * (ci.Preco - ci.Desconto)) }*@
 
             <table>
                 <thead>
                     <tr>
-                        <th>nº</th>
-                        @*<th>Item</th>*@
+
+                        <th>Id</th>
+                        <th>Ordem</th>
+                        <th>Nome</th>
                         <th>Quantidade</th>
                         <th>Preço</th>
                         <th>Desconto</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,21 +97,24 @@
                     <tr>
 
                         @*<td>@item[0]</td>
-                        <td>@item[1]</td>
-                        <td>@item[2]</td>
-                        <td>@item[3]</td>
-                        <td>@item[4]</td>
-                        <td>@item[5]</td>*@
-                        
+        <td>@item[1]</td>
+        <td>@item[2]</td>
+        <td>@item[3]</td>
+        <td>@item[4]</td>
+        <td>@item[5]</td>*@
+                                                
+                        <td>@item.Id</td>
                         <td>@item.Ordem</td>
-                        @*<td>@item.Item.Nome</td>*@
+                        <td>@item.Nome</td>
                         <td>@item.Quantidade</td>
                         <td>@item.Preco</td>
                         <td>@item.Desconto</td>
-                        <td>
-                            @Html.ActionLink("Remover", "Excluir", new { id = item.Id }, new { @class = "icon-cancel" })
-                            @Html.RouteLink("Editar", "PostEditar", new { id = item.Id }, new { @class = "icon-edit" })
-                        </td>
+                        <td>@item.Total</td>
+
+                        @*<td>
+            @Html.ActionLink("Remover", "Excluir", new { id = item.Id }, new { @class = "icon-cancel" })
+            @Html.RouteLink("Editar", "PostEditar", new { id = item.Id }, new { @class = "icon-edit" })
+        </td>*@
                     </tr>
                     }
                 </tbody>
@@ -117,5 +128,6 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
 </body>
 </html>
