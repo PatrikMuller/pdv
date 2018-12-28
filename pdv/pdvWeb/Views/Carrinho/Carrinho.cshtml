@@ -89,6 +89,7 @@
                         <th>Preço</th>
                         <th>Desconto</th>
                         <th>Total</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -111,10 +112,11 @@
                         <td>@item.Desconto</td>
                         <td>@item.Total</td>
 
-                        @*<td>
-            @Html.ActionLink("Remover", "Excluir", new { id = item.Id }, new { @class = "icon-cancel" })
-            @Html.RouteLink("Editar", "PostEditar", new { id = item.Id }, new { @class = "icon-edit" })
-        </td>*@
+                        <td>
+                            @Html.ActionLink("Remover", "Excluir", new { id = item.Id }, new { @class = "icon-cancel" })
+                            @Html.RouteLink("Editar", "PostEditar", new { id = item.Id }, new { @class = "icon-edit" })
+                        </td>
+                                        
                     </tr>
                     }
                 </tbody>

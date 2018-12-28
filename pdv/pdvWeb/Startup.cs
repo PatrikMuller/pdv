@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using pdvInfraestrutura.Database;
+using pdvInfraestrutura.Access;
 
 namespace pdvWeb
 {
@@ -37,7 +38,10 @@ namespace pdvWeb
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddEntityFrameworkNpgsql().AddDbContext<pdvContext>();
-                        
+
+            services.AddTransient<CarrinhoAccess, CarrinhoAccess>();
+            services.AddTransient<CarrinhoItemAccess, CarrinhoItemAccess>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

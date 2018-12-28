@@ -12,3 +12,17 @@ C:\Users\User\Documents\GitHub\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvInf
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.dll
 C:\Users\User\Documents\GitHub\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.pdb
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvConsole.deps.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvConsole.runtimeconfig.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvConsole.runtimeconfig.dev.json
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvConsole.dll
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvConsole.pdb
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvInfraestrutura.dll
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\bin\Debug\netcoreapp2.1\pdvInfraestrutura.pdb
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.csprojAssemblyReference.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.csproj.CoreCompileInputs.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.AssemblyInfoInputs.cache
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.AssemblyInfo.cs
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.csproj.CopyComplete
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.dll
+C:\Users\patrikmuller\Source\Repos\pdv\pdv\pdvConsole\obj\Debug\netcoreapp2.1\pdvConsole.pdb

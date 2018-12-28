@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using pdvInfraestrutura.Access;
 using pdvInfraestrutura.Database;
 using pdvInfraestrutura.Model;
-using pdvWeb.Models;
+
 
 namespace pdvWeb.Controllers
 {
@@ -15,9 +16,14 @@ namespace pdvWeb.Controllers
     {
         private readonly pdvContext _context;
 
-        public CarrinhoController(pdvContext context)
+        private readonly CarrinhoAccess carrinhoAccess;
+        private readonly CarrinhoItemAccess carrinhoItemAccess;
+
+        public CarrinhoController(pdvContext context, CarrinhoAccess cAccess, CarrinhoItemAccess ciAccess)
         {
             _context = context;
+            this.carrinhoAccess = cAccess;
+            this.carrinhoItemAccess = ciAccess;
         }
 
         // GET: Carrinho
@@ -86,66 +92,17 @@ namespace pdvWeb.Controllers
 
 
         // GET: Carrinho/Edit/5
-        //public async Task<IActionResult> Carrinho(int? id)
-        public ActionResult Carrinho(int? id)
+        public ActionResult Carrinho(int id)
         {
             //if (id == null)
             //{
             //    return NotFound();
             //}
 
-            //var carrinho = await _context.Carrinhos.FindAsync(id);
-            //var carrinho = await _context.Carrinhos.Where(o => o.Id == id).SingleOrDefault();
-
-            //var retorno = (from l in session.Query<CarrinhoItem>().
-            //               Fetch(o => o.Item).
-            //               Where(o => o.Carrinho.Id == idCarrinho).
-            //               Select(o => new { o.Ordem, o.Item.Nome, o.Quantidade, o.Preco, o.Desconto, Total = (o.Quantidade * (o.Preco - o.Desconto)) }).
-            //               OrderBy(o => o.Ordem)
-            //               select l).ToList();
-            
-            var Carrinho = _context.Carrinhos.Where(o => o.Id == id).SingleOrDefault();
-
-            //var itens = _context.Items.ToList();
-
-            var i = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id);
-
-            //ViewBag.Carrinho = _context.Carrinhos.Where(o => o.Id == id);
-            //ViewBag.Itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
-
-            List<ViewModelCarrinhoItem> itens = (from ci in _context.CarrinhoItems
-                                                 where ci.Carrinho.Id == 2
-                        select new ViewModelCarrinhoItem {
-                            Id = ci.Id,
-                            Ordem = ci.Ordem,
-                            Nome = ci.Item.Nome,
-                            Quantidade = ci.Quantidade,
-                            Preco = ci.Preco,
-                            Desconto = ci.Desconto,
-                            Total = (ci.Quantidade * (ci.Preco - ci.Desconto))
-                        }).ToList();
-                         //select ci;
-                        
-            
-            ViewBag.Itens = itens;
-
-
-            //var robotDogs = (from d in context.RobotDogs
-            //                 join f in context.RobotFactories
-            //                 on d.RobotFactoryId equals f.RobotFactoryId
-            //                 where f.Location == "Texas"
-            //                 select d).ToList();
-
-
-            //if (carrinho == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //var itens = _context.CarrinhoItems.Where(o => o.Carrinho.Id == id).ToList();
+            var Carrinho = carrinhoAccess.Ler(id);
+            ViewBag.Itens = carrinhoItemAccess.Listar(id);
 
             return View(Carrinho);
-            
         }
 
 
